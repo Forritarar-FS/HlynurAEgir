@@ -1,23 +1,23 @@
-
-
-<div align="center" style="margin-left:300px; margin-top:100px">
-<form action="handleregister.php" method="post">
-<p>Register</p>
-<input name="RegisterUserN" type="text" placeholder="username"><br><br>
-<input name="RegisterPass" type="password" placeholder="password"><br><br>
-<input name="RegisterEmail" type="text" placeholder="Email"><br><br>
-<input name="Register" type="submit">
-</form>
+<html>
+<form action="login.php">
+  <div float="left">
+    <input value="Login" type="submit" style="margin-left:1300px" name="Login">
+  </input>
 </div>
+</form>
+<form action="register.php">
+  <div float="left">
+    <input value="Register" type="submit" style="margin-left:1290px" name="Register">
+  </input>
+</div>
+</form>
 
-
-
-
-<div align="center" style="margin-top:-175; margin-left:-300px">
+<div align="center" style="margin-top:100; margin-left:-75px">
 <form action="handlelogin.php" method="post" >
 <p>Login</p>
-<input name="Username" type="text" placeholder="userame"><br><br>
-<input name="Password" type="password" placeholder="password"><br><br>
-<input name="Login" type="submit">
+<input name="Username" type="text" placeholder="Username"><br><br>
+<input name="password" type="password" placeholder="Password"><br><br>
+<input name="Login" type="Submit">
 </from>
 </div>
+</html>
