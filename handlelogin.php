@@ -18,27 +18,19 @@ while( $row = mysql_fetch_assoc( $UTjekk)){
   }
 }
 if($LUsername==""){
-  ?>
-Invalid Username or password
-<?php
 }
 else{
 if ($LUsername==$row['username']){
-?>
-Username works...
-<?php
-$sql1="select password from login where username='$LUsername'";
-$PTjekk = mysql_query($sql1);
-echo mysql_error($link);
-    $row = mysql_fetch_assoc( $PTjekk);
-      if (password_verify($LPassword, $row['password'])) {
-          echo 'Password is valid!';
-          header('Location: '."/lokaverk/Register.php");
-          session_start();
-            $_SESSION['username']=$LUsername;
-                    }
-          else
-          {
+
+  $sql1="select password from login where username='$LUsername'";
+  $PTjekk = mysql_query($sql1);
+  echo mysql_error($link);
+  $row = mysql_fetch_assoc( $PTjekk);
+  if (password_verify($LPassword, $row['password'])) {
+    session_start();
+    $_SESSION['username']=$LUsername;
+    require_once('register.php');
+
   }
 }
 else{
